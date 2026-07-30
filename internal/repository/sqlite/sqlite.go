@@ -1,4 +1,4 @@
-package sqlgo
+package sqlite
 
 import (
 	"database/sql"
@@ -10,7 +10,7 @@ type SQLRepository struct {
 	db *sql.DB
 }
 
-func NewSQLRepository(db *sql.DB) (*SQLRepository, error) {
+func NewRepository(db *sql.DB) (*SQLRepository, error) {
 	if db == nil {
 		return nil, fmt.Errorf("db is required")
 	}
